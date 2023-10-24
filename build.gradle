@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'eclipse'
 
-version = '0.1'
+version = '0.2'
 group = 'net.mcalec.mcalecs_changed_addon'
 archivesBaseName = 'mcalecs_changed_addon'
 
@@ -87,7 +87,7 @@ repositories {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.18.2-40.2.0' // Forge
-    implementation fg.deobf("net.ltxprogrammer.changed:Changed-m1.18.2-f40.2.0:v0.12b") // Changed Mod
+    implementation fg.deobf("net.ltxprogrammer.changed:Changed-m1.18.2-f40.2.0:v0.12.1") // Changed Mod
 	implementation fg.deobf("curse.maven:changed-addon-plus-711303:4751153") // Changed Addon
     implementation fg.deobf("curse.maven:lightspeedmod-821790:4594803") // Lightspeed Mod
     implementation fg.deobf("curse.maven:rubidium-574856:4494903") // Rubidium Mod
