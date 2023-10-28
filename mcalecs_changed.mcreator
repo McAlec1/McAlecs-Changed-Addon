@@ -63,9 +63,9 @@
       "registry_name": "addon_book_gui",
       "metadata": {
         "files": [
+          "src/main/java/net/mcalec/changedaddon/client/gui/AddonBookGUIScreen.java",
           "src/main/java/net/mcalec/changedaddon/world/inventory/AddonBookGUIMenu.java",
-          "src/main/java/net/mcalec/changedaddon/network/AddonBookGUIButtonMessage.java",
-          "src/main/java/net/mcalec/changedaddon/client/gui/AddonBookGUIScreen.java"
+          "src/main/java/net/mcalec/changedaddon/network/AddonBookGUIButtonMessage.java"
         ]
       },
       "path": "~/Book GUI/GUIs"
@@ -161,8 +161,8 @@
       "registry_name": "addon_book_gui_page_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalec/changedaddon/world/inventory/AddonBookGUIPage1Menu.java",
           "src/main/java/net/mcalec/changedaddon/client/gui/AddonBookGUIPage1Screen.java",
+          "src/main/java/net/mcalec/changedaddon/world/inventory/AddonBookGUIPage1Menu.java",
           "src/main/java/net/mcalec/changedaddon/network/AddonBookGUIPage1ButtonMessage.java"
         ]
       },
@@ -253,9 +253,9 @@
       "registry_name": "addon_book_gui_dev_test",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalec/changedaddon/client/gui/AddonBookGUIDevTestScreen.java",
           "src/main/java/net/mcalec/changedaddon/world/inventory/AddonBookGUIDevTestMenu.java",
-          "src/main/java/net/mcalec/changedaddon/network/AddonBookGUIDevTestButtonMessage.java"
+          "src/main/java/net/mcalec/changedaddon/network/AddonBookGUIDevTestButtonMessage.java",
+          "src/main/java/net/mcalec/changedaddon/client/gui/AddonBookGUIDevTestScreen.java"
         ]
       },
       "path": "~/Book GUI/GUIs/GUIDevTest"
@@ -348,9 +348,9 @@
       "registry_name": "dev_entity_test",
       "metadata": {
         "files": [
+          "src/main/java/net/mcalec/changedaddon/entity/DevEntityTestEntity.java",
           "src/main/java/net/mcalec/changedaddon/client/renderer/DevEntityTestRenderer.java",
-          "src/main/resources/assets/mcalecs_changed/models/item/dev_entity_test_spawn_egg.json",
-          "src/main/java/net/mcalec/changedaddon/entity/DevEntityTestEntity.java"
+          "src/main/resources/assets/mcalecs_changed/models/item/dev_entity_test_spawn_egg.json"
         ]
       },
       "path": "~/Entities/Dev Entity Test"
@@ -490,8 +490,8 @@
       "registry_name": "pride_balloon",
       "metadata": {
         "files": [
-          "src/main/resources/assets/mcalecs_changed/models/item/pride_balloon.json",
-          "src/main/java/net/mcalec/changedaddon/item/PrideBalloonItem.java"
+          "src/main/java/net/mcalec/changedaddon/item/PrideBalloonItem.java",
+          "src/main/resources/assets/mcalecs_changed/models/item/pride_balloon.json"
         ]
       },
       "path": "~/Items/Pride Balloon"

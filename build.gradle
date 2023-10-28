@@ -13,9 +13,9 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'eclipse'
 
-version = '0.2'
+version = '0.2r'
 group = 'net.mcalec.mcalecs_changed_addon'
-archivesBaseName = 'mcalecs_changed_addon'
+archivesBaseName = 'mcalecs-changed-addon'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -88,7 +88,7 @@ repositories {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.18.2-40.2.0' // Forge
     implementation fg.deobf("net.ltxprogrammer.changed:Changed-m1.18.2-f40.2.0:v0.12.1") // Changed Mod
-	implementation fg.deobf("curse.maven:changed-addon-plus-711303:4789924") // Changed Addon
+	implementation fg.deobf("curse.maven:changed-addon-plus-711303:4816628") // Changed Addon
     implementation fg.deobf("curse.maven:lightspeedmod-821790:4594803") // Lightspeed Mod
 	implementation fg.deobf("curse.maven:jei-238222:4593548") // JEI Mod
     implementation fg.deobf("curse.maven:fastload-630620:4706140") // FastLoad Mod
