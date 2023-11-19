@@ -88,30 +88,29 @@ repositories {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.18.2-40.2.0' // Forge
     implementation fg.deobf("net.ltxprogrammer.changed:Changed-m1.18.2-f40.2.0:v0.12.1") // Changed Mod
-	implementation fg.deobf("curse.maven:changed-addon-plus-711303:4816628") // Changed Addon
+	implementation fg.deobf("curse.maven:changed-addon-plus-711303:4816628") // Changed Addon Plus Mod
     implementation fg.deobf("curse.maven:lightspeedmod-821790:4594803") // Lightspeed Mod
 	implementation fg.deobf("curse.maven:jei-238222:4593548") // JEI Mod
     implementation fg.deobf("curse.maven:fastload-630620:4706140") // FastLoad Mod
     implementation fg.deobf("curse.maven:spark-361579:4505375") // Spark Mod
-    implementation fg.deobf("curse.maven:jade-324717:4575623") // Jade Mod
+    implementation fg.deobf("curse.maven:jade-324717:4800837") // Jade Mod
     implementation fg.deobf("curse.maven:better-third-person-435044:4177087") // Better Third Person Mod
     implementation fg.deobf("curse.maven:terrablender-563928:3957976") // TerraBlender Mod
     implementation fg.deobf("curse.maven:rubidium-574856:4494903") // Rubidium Mod
-    implementation fg.deobf("curse.maven:rubidium-extra-654373:4513591") // Rubidium Extra Mod
-    implementation fg.deobf("curse.maven:rubidium-toolkit-665479:4378362") // Rubidium Toolkit Mod--
-    implementation fg.deobf("curse.maven:sodium-rubidium-occlusion-culling-fix-909469:4734648") // OCRenderFix Mod--
     implementation fg.deobf("curse.maven:textrues-rubidium-options-663125:4743528") // TexTrues Rubidium Options Mod
     implementation fg.deobf("curse.maven:attributefix-280510:3801087") // Attrubute Fix Mod
     implementation fg.deobf("curse.maven:clumps-256717:4153344") // Clumps Mod
     implementation fg.deobf("curse.maven:connectivity-470193:3833738") // Connectivity Mod
     implementation fg.deobf("curse.maven:smooth-chunk-save-582327:3797990") // Smooth Chunk Save Mod
     implementation fg.deobf("curse.maven:worldedit-225608:3697298") // WorldEdit Mod
+    implementation fg.deobf("maven.modrinth:GchcoXML:UynWw2df") // Oculus Mod (Modrinth)
+	implementation fg.deobf("maven.modrinth:QwxR6Gcd:jxiMbq1j") // Debugify Mod (Modrinth)
     implementation fg.deobf("maven.modrinth:NRjRiSSD:AK7fR5Ja") // Memory Leak Fix Mod (Modrinth)
     implementation fg.deobf("maven.modrinth:QdG47OkI:EglYgeMq") // Model Gap Fix Mod (Modrinth)
-    implementation fg.deobf("maven.modrinth:ZP7xHXtw:WrfRSfUG") // Remove Reloading Screen Mod (Rrls) (Modrinth)
-    implementation fg.deobf("maven.modrinth:9s6osm5g:BLMp2TRt") // Cloth Config API Mod (Modrinth)
-    implementation fg.deobf("maven.modrinth:h1E7sQNL:edTNIVIS") // Customizable Player Models Mod (Modrinth)
-    implementation fg.deobf("maven.modrinth:t5W7Jfwy:34Zka5Wk") // Pehkui Mod (Modrinth)
+    implementation fg.deobf("maven.modrinth:ZP7xHXtw:cOAITv1T") // Remove Reloading Screen Mod (Rrls) (Modrinth)
+    implementation fg.deobf("maven.modrinth:9s6osm5g:ZbWG3eJW") // Cloth Config API Mod (Modrinth)
+    implementation fg.deobf("maven.modrinth:h1E7sQNL:KaB39zJF") // Customizable Player Models Mod (Modrinth)
+    implementation fg.deobf("maven.modrinth:t5W7Jfwy:OJw7ES2q") // Pehkui Mod (Modrinth)
     
 }
 
