@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "changed_addon:litix_camonia_fluid",
+    "changed_addon:darklatexpuddle",
+    "changed_addon:latex_insulator"
+  ]
+}

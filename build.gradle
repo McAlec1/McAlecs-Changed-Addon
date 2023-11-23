@@ -82,6 +82,18 @@ repositories {
 		name = "Modrinth Maven"
         url = "https://api.modrinth.com/maven"
     }
+
+    maven {
+        // location of the maven that hosts JEI files
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+
+    maven {
+        // location of a maven mirror for JEI files, as a fallback
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
     
 }
 
@@ -98,7 +110,7 @@ dependencies {
     implementation fg.deobf("curse.maven:terrablender-563928:3957976") // TerraBlender Mod
     implementation fg.deobf("curse.maven:rubidium-574856:4494903") // Rubidium Mod
     implementation fg.deobf("curse.maven:textrues-rubidium-options-663125:4743528") // TexTrues Rubidium Options Mod
-    implementation fg.deobf("curse.maven:attributefix-280510:3801087") // Attrubute Fix Mod
+    implementation fg.deobf("curse.maven:attributefix-280510:3801087") // Attribute Fix Mod
     implementation fg.deobf("curse.maven:clumps-256717:4153344") // Clumps Mod
     implementation fg.deobf("curse.maven:connectivity-470193:3833738") // Connectivity Mod
     implementation fg.deobf("curse.maven:smooth-chunk-save-582327:3797990") // Smooth Chunk Save Mod
@@ -107,7 +119,7 @@ dependencies {
 	implementation fg.deobf("maven.modrinth:QwxR6Gcd:jxiMbq1j") // Debugify Mod (Modrinth)
     implementation fg.deobf("maven.modrinth:NRjRiSSD:AK7fR5Ja") // Memory Leak Fix Mod (Modrinth)
     implementation fg.deobf("maven.modrinth:QdG47OkI:EglYgeMq") // Model Gap Fix Mod (Modrinth)
-    implementation fg.deobf("maven.modrinth:ZP7xHXtw:cOAITv1T") // Remove Reloading Screen Mod (Rrls) (Modrinth)
+    implementation fg.deobf("maven.modrinth:ZP7xHXtw:cOAITv1T") // Remove Reloading Screen Mod (RRSM) (Modrinth)
     implementation fg.deobf("maven.modrinth:9s6osm5g:ZbWG3eJW") // Cloth Config API Mod (Modrinth)
     implementation fg.deobf("maven.modrinth:h1E7sQNL:KaB39zJF") // Customizable Player Models Mod (Modrinth)
     implementation fg.deobf("maven.modrinth:t5W7Jfwy:OJw7ES2q") // Pehkui Mod (Modrinth)
