@@ -15,7 +15,7 @@ apply plugin: 'eclipse'
 
 version = '0.2r'
 group = 'net.mcalec.mcalecs_changed_addon'
-archivesBaseName = 'mcalecs-changed-addon'
+archivesBaseName = 'mcalecs_changed_addon'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -30,27 +30,14 @@ minecraft {
 
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+			args '--username', 'McAlec1'
+            jvmArgs = [
+                    "--add-exports=java.base/sun.security.util=ALL-UNNAMED",
+                    "--add-opens=java.base/java.util.jar=ALL-UNNAMED"
+            ]
 
-            mods {
-                changed_addon {
-                    source sourceSets.main
-                }
-            }
-        }
-
-        server {
-            workingDirectory project.file('run')
-
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-
-            mods {
-                changed_addon {
-                    source sourceSets.main
-                }
-            }
-        }
-    }
+         }
+   	}
 }
 
 mixin {
@@ -98,7 +85,7 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.2.0' // Forge
+    minecraft 'net.minecraftforge:forge:1.18.2-40.2.14' // Forge
     implementation fg.deobf("net.ltxprogrammer.changed:Changed-m1.18.2-f40.2.0:v0.12.1") // Changed Mod
 	implementation fg.deobf("curse.maven:changed-addon-plus-711303:4816628") // Changed Addon Plus Mod
     implementation fg.deobf("curse.maven:lightspeedmod-821790:4594803") // Lightspeed Mod
@@ -115,6 +102,7 @@ dependencies {
     implementation fg.deobf("curse.maven:connectivity-470193:3833738") // Connectivity Mod
     implementation fg.deobf("curse.maven:smooth-chunk-save-582327:3797990") // Smooth Chunk Save Mod
     implementation fg.deobf("curse.maven:worldedit-225608:3697298") // WorldEdit Mod
+    implementation fg.deobf("curse.maven:reauth-237701:4408008") // ReAuth Mod
     implementation fg.deobf("maven.modrinth:GchcoXML:UynWw2df") // Oculus Mod (Modrinth)
 	implementation fg.deobf("maven.modrinth:QwxR6Gcd:jxiMbq1j") // Debugify Mod (Modrinth)
     implementation fg.deobf("maven.modrinth:NRjRiSSD:AK7fR5Ja") // Memory Leak Fix Mod (Modrinth)
@@ -145,3 +133,48 @@ repositories {
         }
     }
 }
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: '1.18.2'
+
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                mcalecs_changed_addon {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+
+            mods {
+                mcalecs_changed_addon {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.18.2-40.2.14'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
+apply from: 'mcreator.gradle'

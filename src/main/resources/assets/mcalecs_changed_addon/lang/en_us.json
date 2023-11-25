@@ -38,7 +38,6 @@
   "gui.mcalecs_changed_addon.addon_book_gui.searchEngineTest": "Search",
   "gui.mcalecs_changed_addon.addon_book_gui.label_mcalecs_changed_addon": "McAlec\u0027s Changed Addon",
   "item.mcalecs_changed_addon.baseball_bat": "Baseball Bat",
-  "item.mcalecs_changed_addon.testing_mob_spawn_egg": "Testing Mob Spawn Egg",
   "gui.mcalecs_changed_addon.addon_book_gui.label_thank_you_for_downloading": "Thank you for downloading.",
   "gui.mcalecs_changed.addon_book_gui.label_mcalecs_changed_addon": "McAlec\u0027s Changed Addon",
   "gui.mcalecs_changed_addon.addon_book_gui.secretPage": "",
@@ -53,7 +52,6 @@
   "gui.mcalecs_changed.addon_book_gui.searchEngineTest": "Search",
   "gui.mcalecs_changed.addon_book_gui.tooltip_more_pages_will_be_added_on_late": "More pages will be added on later!",
   "gui.mcalecs_changed_addon.addon_book_gui_dev_test.button_exit": "exit",
-  "entity.mcalecs_changed_addon.testing_mob": "Testing Mob",
   "gui.mcalecs_changed.addon_book_gui_page_1.label_howd_you_get_here": "How\u0027d you get here?",
   "item.mcalecs_changed_addon.dev_entity_test_spawn_egg": "Dev Entity Test Spawn Egg"
 }

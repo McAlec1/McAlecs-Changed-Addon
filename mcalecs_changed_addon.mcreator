@@ -20,8 +20,8 @@
       "registry_name": "baseball_bat",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalecs/changed_addon/item/BaseballBatToolItem.java",
-          "src/main/resources/assets/mcalecs_changed_addon/models/item/baseball_bat.json"
+          "src/main/resources/assets/mcalecs_changed_addon/models/item/baseball_bat.json",
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/item/BaseballBatToolItem.java"
         ]
       },
       "path": "~/Tools"
@@ -48,8 +48,8 @@
       "registry_name": "addon_book",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalecs/changed_addon/item/AddonBookItem.java",
-          "src/main/resources/assets/mcalecs_changed_addon/models/item/addon_book.json"
+          "src/main/resources/assets/mcalecs_changed_addon/models/item/addon_book.json",
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/item/AddonBookItem.java"
         ]
       },
       "path": "~/Book GUI"
@@ -63,9 +63,9 @@
       "registry_name": "addon_book_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalecs/changed_addon/network/AddonBookGUIButtonMessage.java",
-          "src/main/java/net/mcalecs/changed_addon/world/inventory/AddonBookGUIMenu.java",
-          "src/main/java/net/mcalecs/changed_addon/client/gui/AddonBookGUIScreen.java"
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/world/inventory/AddonBookGUIMenu.java",
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/network/AddonBookGUIButtonMessage.java",
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/client/gui/AddonBookGUIScreen.java"
         ]
       },
       "path": "~/Book GUI/GUIs"
@@ -79,7 +79,7 @@
       "registry_name": "addon_book_gui_button_close",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalecs/changed_addon/procedures/AddonBookGUIButtonCloseProcedure.java"
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/procedures/AddonBookGUIButtonCloseProcedure.java"
         ],
         "dependencies": [
           {
@@ -99,7 +99,7 @@
       "registry_name": "addon_book_right_clicked",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalecs/changed_addon/procedures/AddonBookRightClickedProcedure.java"
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/procedures/AddonBookRightClickedProcedure.java"
         ],
         "dependencies": [
           {
@@ -161,9 +161,9 @@
       "registry_name": "addon_book_gui_page_1",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalecs/changed_addon/network/AddonBookGUIPage1ButtonMessage.java",
-          "src/main/java/net/mcalecs/changed_addon/world/inventory/AddonBookGUIPage1Menu.java",
-          "src/main/java/net/mcalecs/changed_addon/client/gui/AddonBookGUIPage1Screen.java"
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/client/gui/AddonBookGUIPage1Screen.java",
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/world/inventory/AddonBookGUIPage1Menu.java",
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/network/AddonBookGUIPage1ButtonMessage.java"
         ]
       },
       "path": "~/Book GUI/GUIs"
@@ -177,7 +177,7 @@
       "registry_name": "addon_book_search_button_display",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalecs/changed_addon/procedures/AddonBookSearchButtonDisplayProcedure.java"
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/procedures/AddonBookSearchButtonDisplayProcedure.java"
         ],
         "dependencies": [
           {
@@ -217,7 +217,7 @@
       "registry_name": "addon_book_gui_main",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalecs/changed_addon/procedures/AddonBookGUIMainProcedure.java"
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/procedures/AddonBookGUIMainProcedure.java"
         ],
         "dependencies": [
           {
@@ -253,9 +253,9 @@
       "registry_name": "addon_book_gui_dev_test",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalecs/changed_addon/network/AddonBookGUIDevTestButtonMessage.java",
-          "src/main/java/net/mcalecs/changed_addon/client/gui/AddonBookGUIDevTestScreen.java",
-          "src/main/java/net/mcalecs/changed_addon/world/inventory/AddonBookGUIDevTestMenu.java"
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/client/gui/AddonBookGUIDevTestScreen.java",
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/world/inventory/AddonBookGUIDevTestMenu.java",
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/network/AddonBookGUIDevTestButtonMessage.java"
         ]
       },
       "path": "~/Book GUI/GUIs/GUIDevTest"
@@ -269,7 +269,7 @@
       "registry_name": "gui_dev_test_untransfur",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalecs/changed_addon/procedures/GUIDevTestUntransfurProcedure.java"
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/procedures/GUIDevTestUntransfurProcedure.java"
         ],
         "dependencies": [
           {
@@ -301,7 +301,7 @@
       "registry_name": "gui_dev_test_time_set",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalecs/changed_addon/procedures/GUIDevTestTimeSetProcedure.java"
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/procedures/GUIDevTestTimeSetProcedure.java"
         ],
         "dependencies": [
           {
@@ -333,7 +333,7 @@
       "registry_name": "dev_item",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalecs/changed_addon/item/DevItemItem.java",
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/item/DevItemItem.java",
           "src/main/resources/assets/mcalecs_changed_addon/models/item/dev_item.json"
         ]
       },
@@ -347,73 +347,10 @@
       "registry_name": "terminated_lab",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalecs/changed_addon/world/features/TerminatedLabFeature.java"
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/world/features/TerminatedLabFeature.java"
         ]
       },
       "path": "~/Structures"
-    },
-    {
-      "name": "ModItems",
-      "type": "tag",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mod_items",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/mcalecs_changed_addon/tags/items/mod_items.json"
-        ]
-      },
-      "path": "~/Tags"
-    },
-    {
-      "name": "ModEntitys",
-      "type": "tag",
-      "sortid": 16,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mod_entitys",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/mcalecs_changed_addon/tags/entity_types/mod_entitys.json"
-        ]
-      },
-      "path": "~/Tags"
-    },
-    {
-      "name": "LatexEntitys",
-      "type": "tag",
-      "sortid": 18,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "latex_entitys",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/mcalecs_changed/tags/entity_types/latexentity.json"
-        ]
-      },
-      "path": "~/Tags"
-    },
-    {
-      "name": "IfPlayerIsInWater",
-      "type": "procedure",
-      "sortid": 19,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "if_player_is_in_water",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcalecs/changed_addon/procedures/IfPlayerIsInWaterProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Entities/Dev Entity Test"
     },
     {
       "name": "MadeBaseballBat",
@@ -438,7 +375,7 @@
       "registry_name": "pride_balloon_item_in_hand_tick",
       "metadata": {
         "files": [
-          "src/main/java/net/mcalecs/changed_addon/procedures/PrideBalloonItemInHandTickProcedure.java"
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/procedures/PrideBalloonItemInHandTickProcedure.java"
         ],
         "dependencies": [
           {
@@ -475,46 +412,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/mcalecs_changed_addon/models/item/pride_balloon.json",
-          "src/main/java/net/mcalecs/changed_addon/item/PrideBalloonItem.java"
+          "src/main/java/net/mcalecs/mcalecs_changed_addon/item/PrideBalloonItem.java"
         ]
       },
       "path": "~/Items/Pride Balloon"
-    },
-    {
-      "name": "AquaticMovementProcedure",
-      "type": "procedure",
-      "sortid": 24,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "aquatic_movement_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcalecs/changed_addon/procedures/AquaticMovementProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Entities/Dev Entity Test"
-    },
-    {
-      "name": "TestingMob",
-      "type": "livingentity",
-      "sortid": 25,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "testing_mob",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcalecs/changed_addon/entity/TestingMobEntity.java",
-          "src/main/resources/assets/mcalecs_changed_addon/models/item/testing_mob_spawn_egg.json",
-          "src/main/java/net/mcalecs/changed_addon/client/renderer/TestingMobRenderer.java"
-        ]
-      },
-      "path": "~/Entities/Dev Entity Test"
     }
   ],
   "variable_elements": [],
@@ -560,7 +461,6 @@
       "gui.mcalecs_changed_addon.addon_book_gui.searchEngineTest": "Search",
       "gui.mcalecs_changed_addon.addon_book_gui.label_mcalecs_changed_addon": "McAlec\u0027s Changed Addon",
       "item.mcalecs_changed_addon.baseball_bat": "Baseball Bat",
-      "item.mcalecs_changed_addon.testing_mob_spawn_egg": "Testing Mob Spawn Egg",
       "gui.mcalecs_changed_addon.addon_book_gui.label_thank_you_for_downloading": "Thank you for downloading.",
       "gui.mcalecs_changed.addon_book_gui.label_mcalecs_changed_addon": "McAlec\u0027s Changed Addon",
       "gui.mcalecs_changed_addon.addon_book_gui.secretPage": "",
@@ -575,7 +475,6 @@
       "gui.mcalecs_changed.addon_book_gui.searchEngineTest": "Search",
       "gui.mcalecs_changed.addon_book_gui.tooltip_more_pages_will_be_added_on_late": "More pages will be added on later!",
       "gui.mcalecs_changed_addon.addon_book_gui_dev_test.button_exit": "exit",
-      "entity.mcalecs_changed_addon.testing_mob": "Testing Mob",
       "gui.mcalecs_changed.addon_book_gui_page_1.label_howd_you_get_here": "How\u0027d you get here?",
       "item.mcalecs_changed_addon.dev_entity_test_spawn_egg": "Dev Entity Test Spawn Egg"
     }
@@ -654,17 +553,8 @@
         ]
       },
       {
-        "name": "Tags",
-        "children": []
-      },
-      {
         "name": "Entities",
-        "children": [
-          {
-            "name": "Dev Entity Test",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "name": "Advancements",
@@ -696,7 +586,7 @@
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.18.2",
     "credits": "McAlec",
-    "modElementsPackage": "net.mcalecs.changed_addon",
+    "modElementsPackage": "net.mcalecs.mcalecs_changed_addon",
     "lockBaseModFiles": false
   },
   "mcreatorVersion": 202300336712
