@@ -5,6 +5,8 @@
 package net.mcalecs.mcalecs_changed_addon.init;
 
 import net.minecraftforge.network.IContainerFactory;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 
 import net.minecraft.world.inventory.MenuType;

@@ -4,6 +4,8 @@
  */
 package net.mcalecs.mcalecs_changed_addon.init;
 
+import net.minecraftforge.fml.common.Mod;
+
 import net.minecraft.world.level.GameRules;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)

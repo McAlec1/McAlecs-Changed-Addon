@@ -66,59 +66,6 @@
         }
       },
       {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_more_pages_will_be_added_on_late",
-          "text": {
-            "fixedValue": "More pages will be added on later!"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 205,
-          "y": 175
-        }
-      },
-      {
-        "type": "textfield",
-        "data": {
-          "placeholder": "Search",
-          "name": "searchEngineTest",
-          "width": 120,
-          "height": 20,
-          "x": 115,
-          "y": 95
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_search",
-          "text": "Go!",
-          "onClick": {
-            "name": "AddonBookSearchButtonDisplay"
-          },
-          "width": 56,
-          "height": 20,
-          "x": 255,
-          "y": 95
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_hint_type_test_for_a_secret_s",
-          "text": {
-            "fixedValue": "Hint: Type \"Test\" for a secret screen"
-          },
-          "color": {
-            "value": -10066330,
-            "falpha": 0.0
-          },
-          "x": 115,
-          "y": 155
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_i",
@@ -130,7 +77,7 @@
             "falpha": 0.0
           },
           "x": 215,
-          "y": 185
+          "y": 175
         }
       }
     ],

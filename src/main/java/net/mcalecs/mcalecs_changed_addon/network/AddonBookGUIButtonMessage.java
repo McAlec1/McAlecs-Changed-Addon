@@ -12,7 +12,6 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcalecs.mcalecs_changed_addon.world.inventory.AddonBookGUIMenu;
-import net.mcalecs.mcalecs_changed_addon.procedures.AddonBookSearchButtonDisplayProcedure;
 import net.mcalecs.mcalecs_changed_addon.procedures.AddonBookGUIButtonCloseProcedure;
 import net.mcalecs.mcalecs_changed_addon.McalecsChangedAddonMod;
 
@@ -66,10 +65,6 @@ public class AddonBookGUIButtonMessage {
 		if (buttonID == 0) {
 
 			AddonBookGUIButtonCloseProcedure.execute(entity);
-		}
-		if (buttonID == 2) {
-
-			AddonBookSearchButtonDisplayProcedure.execute(world, x, y, z, entity, guistate);
 		}
 	}
 
