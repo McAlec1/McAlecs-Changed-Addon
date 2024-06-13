@@ -1,26 +1,34 @@
 buildscript {
-    repositories {
-        maven { url = 'https://maven.minecraftforge.net' }
+	repositories {
+		maven { url = 'https://maven.minecraftforge.net' }
         maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
         mavenCentral()
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
         classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
-    }
+	}
 }
-apply plugin: 'net.minecraftforge.gradle'
-apply plugin: 'org.spongepowered.mixin'
-apply plugin: 'eclipse'
 
-version = '0.2r'
-group = 'net.mcalec.mcalecs_changed_addon'
-archivesBaseName = 'mcalecs_changed_addon'
+plugins {
+	id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'org.spongepowered.mixin' version '0.7.+'
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+}
+
+version = modVersion
+group = 'net.mcalec.mcs_changed_addon'
+archivesBaseName = 'mcs_changed_addon'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
+println "build.gradle is starting!"
+println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
+
 minecraft {
-    mappings channel: 'official', version: '1.18.2'
+    mappings channel: 'official', version: minecraftVersion
 
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
@@ -30,19 +38,56 @@ minecraft {
 
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-			args '--username', 'McAlec1'
-            jvmArgs = [
-                    "--add-exports=java.base/sun.security.util=ALL-UNNAMED",
-                    "--add-opens=java.base/java.util.jar=ALL-UNNAMED"
-            ]
+            property 'forge.enabledGameTestNamespaces', 'mcs_changed_addon'
 
-         }
-   	}
-}
+            mods {
+                "${modId}" {
+                    source sourceSets.main
+                }
+            }
+        }
 
-mixin {
-    env {
-        remapRefMap = true
+        server {
+            workingDirectory project.file('run-server')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            property 'forge.enabledGameTestNamespaces', 'mcs_changed_addon'
+
+            mods {
+                "${modId}" {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        gameTestServer {
+        	workingDirectory project.file('run-server')
+        	
+        	property 'forge.logging.markers', 'REGISTRIES'
+        	property 'forge.logging.console.level', 'debug'
+        	property 'forge.enabledGameTestNamespaces', 'mcs_changed_addon'
+        	
+        	mods {
+                "${modId}" {
+                    source sourceSets.main
+                }
+            }
+        }
+        
+        data {
+        	property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            property 'forge.enabledGameTestNamespaces', 'mcs_changed_addon'
+
+            args '--mod', 'mcalecs', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+
+			mods {
+                "${modId}" {
+                    source sourceSets.main
+                }
+            }
+        }
     }
 }
 
@@ -51,72 +96,101 @@ repositories {
     flatDir {
         dirs 'libs'
     }
+    
+	maven {
+    	// Curse Maven
+    	name = "Curse Maven"
+        url "https://cursemaven.com"
+    }
 
     maven {
-		// CurseForge maven
-		name = "CurseForge Maven"
-        url = "https://cursemaven.com"
+    	// Modrinth Maven
+    	name = "Modrinth Maven"
+        url = "https://api.modrinth.com/maven"
     }
+
+    maven {
+        // Mod Maven
+        name = "Mod Maven"
+        url = "https://modmaven.dev"
+    }
+
+    maven {
+        // location of the maven that hosts JEI files before January 2023
+        name = "Progwml6's maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+
+    maven {
+        // location of the maven that hosts JEI files since January 2023
+        name = "Jared's maven"
+        url = "https://maven.blamejared.com/"
+    }
+
+    maven {
+    	// Fuzs Maven
+        name = "Fuzs Mod Resources"
+        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+    }
+    maven { url "https://maven.shedaniel.me" }
+    
 
     maven {
 		// Changed Mod repo
         name = "Changed"
         url = "https://raw.githubusercontent.com/LtxProgrammer/Changed-Minecraft-Mod/master/mcmodsrepo/"
     }
-
-  	maven {
-		// Modrinth maven
-		name = "Modrinth Maven"
-        url = "https://api.modrinth.com/maven"
-    }
-
-    maven {
-        // location of the maven that hosts JEI files
-        name = "Progwml6 maven"
-        url = "https://dvs1.progwml6.com/files/maven/"
-    }
-
-    maven {
-        // location of a maven mirror for JEI files, as a fallback
-        name = "ModMaven"
-        url = "https://modmaven.dev"
-    }
     
 }
 
+mixin {
+    //config "mixins.mcs_changed_addon.json"
+    //add sourceSets.main, "mixins.mcs_changed_addon.refmap.json"
+
+    showMessageTypes = true
+}
+
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.2.14' // Forge
-    implementation fg.deobf("net.ltxprogrammer.changed:Changed-m1.18.2-f40.2.0:v0.12.1") // Changed Mod
-	implementation fg.deobf("curse.maven:changed-addon-plus-711303:4903584") // Changed Addon Plus Mod
-	implementation fg.deobf("curse.maven:jei-238222:4593548") // Just Enough Items (JEI) Mod
+    // Minecraft and Forge Versions
+    minecraft "net.minecraftforge:forge:${minecraftVersion}-${forgeVersion}" // Forge 1.18.2 20.2.21
+    
+    implementation fg.deobf("net.ltxprogrammer.changed:Changed-m1.18.2-f40.2.0:v0.13.1") // Changed Mod
+	implementation fg.deobf("curse.maven:changed-addon-plus-711303:5319556") // Changed Addon Plus Mod
 }
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
 
-repositories {
-    // Other repositories can go above or below Modrinth's. We don't need priority :)
-    exclusiveContent {
-        forRepository {
-            maven {
-                name = "Modrinth"
-                url = "https://api.modrinth.com/maven"
-            }
+jar {
+    manifest {
+        attributes([
+                "Specification-Title"     : "mcs_changed_addon",
+                "Specification-Vendor"    : "McAlec",
+                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : project.jar.archiveVersion,
+                "Implementation-Vendor"   : "McAlec",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+}
+
+jar.finalizedBy('reobfJar')
+
+publishing {
+    publications {
+        register('mavenJava', MavenPublication) {
+            artifact jar
         }
-        forRepositories(fg.repository) // Only add this if you're using ForgeGradle, otherwise remove this line
-        filter {
-            includeGroup "maven.modrinth"
+    }
+    repositories {
+        maven {
+            url "file://${project.projectDir}/mcmodsrepo"
         }
     }
 }
 
-dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.2.14'
-}
-
-tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
-}
+println "build.gradle is done!"
 
 apply from: 'mcreator.gradle'

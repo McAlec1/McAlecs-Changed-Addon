@@ -3,8 +3,8 @@ loaderVersion="[40,)"
 license="MIT License"
 
 [[mods]]
-modId="mcalecs_changed_addon"
-version="0.2"
+modId="mcs_changed_addon"
+version="1.0.0"
 displayName="McAlec's Changed Addon"
 credits="McAlec"
 displayURL="https://curseforge.com/minecraft/mc-mods/mcalecs-changed-addon"
@@ -13,7 +13,7 @@ logoFile="logo.png"
 authors="McAlec"
 description="Addon Mod to LtxProgrammer's Changed: MC Mod"
 
-[[dependencies.mcalecs_changed_addon]]
+[[dependencies.mcs_changed_addon]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.18.2]"
@@ -21,7 +21,7 @@ description="Addon Mod to LtxProgrammer's Changed: MC Mod"
     side="BOTH"
 
 
-[[dependencies.mcalecs_changed_addon]]
+[[dependencies.mcs_changed_addon]]
     modId="changed"
     mandatory=true
     versionRange="[0,)"

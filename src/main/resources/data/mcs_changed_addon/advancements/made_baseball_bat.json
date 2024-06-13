@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "mcalecs_changed_addon:baseball_bat"
+      "item": "mcs_changed_addon:baseball_bat"
     },
     "title": {
       "translate": "advancements.made_baseball_bat.title"
@@ -21,7 +21,7 @@
         "items": [
           {
             "items": [
-              "mcalecs_changed_addon:baseball_bat"
+              "mcs_changed_addon:baseball_bat"
             ],
             "count": {
               "min": 1,
@@ -32,5 +32,5 @@
       }
     }
   },
-  "parent": "mcalecs_changed_addon:downloaded_mod"
+  "parent": "mcs_changed_addon:downloaded_mod"
 }
